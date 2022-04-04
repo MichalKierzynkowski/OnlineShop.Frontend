@@ -13,7 +13,7 @@
         <input matInput type="password" [(ngModel)]="credentials.password" />
         <mat-icon matSuffix>lock</mat-icon>
       </mat-form-field>
-      <button mat-flat-button color="accent" routerLink="/">Login</button>
+      <button mat-flat-button color="accent" (click)="login()">Login</button>
     </mat-card-content>
   </mat-card>
 </div>
