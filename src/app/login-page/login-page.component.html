@@ -1,0 +1,21 @@
+<div style="display: flex; justify-content: center; margin: 5em">
+  <mat-card class="main-card" style="padding: 1em">
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content class="form-row" style="padding: 1em">
+      <mat-form-field appearance="outline" color="primary">
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]="credentials.username" />
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" color="primary">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="credentials.password" />
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+      <button mat-flat-button color="accent" (click)="login()">Login</button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<style></style>
