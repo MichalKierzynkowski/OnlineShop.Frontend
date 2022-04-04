@@ -4,13 +4,13 @@
     <mat-card-content class="form-row" style="padding: 1em">
       <mat-form-field appearance="outline" color="primary">
         <mat-label>Username</mat-label>
-        <input matInput />
+        <input matInput [(ngModel)]="credentials.login" />
         <mat-icon matSuffix>person</mat-icon>
       </mat-form-field>
 
       <mat-form-field appearance="outline" color="primary">
         <mat-label>Password</mat-label>
-        <input matInput type="password"/>
+        <input matInput type="password" [(ngModel)]="credentials.password" />
         <mat-icon matSuffix>lock</mat-icon>
       </mat-form-field>
       <button mat-flat-button color="accent" routerLink="/">Login</button>
