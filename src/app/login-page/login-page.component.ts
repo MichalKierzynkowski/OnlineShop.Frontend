@@ -18,6 +18,7 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {}
 
   login() {
-    this.loginService.login(this.credentials);
+    const b = this.loginService.login(this.credentials);
+    console.log(b.pipe());
   }
 }
