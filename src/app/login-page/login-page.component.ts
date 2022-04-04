@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPageComponent implements OnInit {
   credentials: any = {
-    login: 'Superman',
-    password: 'IloveMarvel',
+    login: '',
+    password: '',
   };
 
   constructor() {}
