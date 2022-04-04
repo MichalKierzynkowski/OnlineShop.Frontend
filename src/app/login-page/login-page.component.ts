@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginCredentials } from '../models/credentials';
+import {LoginService} from "../login.service";
+
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -11,11 +13,11 @@ export class LoginPageComponent implements OnInit {
     password: '',
   };
 
-  constructor() {}
+  constructor(private loginService: LoginService) {}
 
   ngOnInit(): void {}
 
   login() {
-    alert('login');
+    this.loginService.login(this.credentials);
   }
 }
