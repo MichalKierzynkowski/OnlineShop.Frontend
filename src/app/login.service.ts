@@ -9,10 +9,6 @@ export class LoginService {
   constructor(private http: HttpClient) {}
 
   login(credentials: LoginCredentials): Observable<any> {
-    console.log(credentials);
-
-    // const res = this.http.get<any>("http://localhost:5222/api/Authentication/not-secret");
-
     const response = this.http.post<any>("http://localhost:5222/api/Authentication", credentials);
 
     response.subscribe(x => console.log(x))
