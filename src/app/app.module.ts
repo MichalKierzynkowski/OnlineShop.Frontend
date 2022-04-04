@@ -8,14 +8,23 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { HomeComponent } from './home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [AppComponent, LoginPageComponent, HomeComponent, ToolbarComponent],
+  declarations: [
+    AppComponent,
+    LoginPageComponent,
+    HomeComponent,
+    ToolbarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
