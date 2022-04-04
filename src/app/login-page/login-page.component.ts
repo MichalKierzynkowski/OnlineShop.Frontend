@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginCredentials } from '../models/credentials';
-import {LoginService} from "../login.service";
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-login-page',
@@ -9,7 +9,7 @@ import {LoginService} from "../login.service";
 })
 export class LoginPageComponent implements OnInit {
   credentials: LoginCredentials = {
-    login: '',
+    username: '',
     password: '',
   };
 
@@ -18,7 +18,6 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {}
 
   login() {
-    const b = this.loginService.login(this.credentials);
-    console.log(b.pipe());
+    this.loginService.login(this.credentials);
   }
 }

@@ -11,12 +11,11 @@ export class LoginService {
   login(credentials: LoginCredentials): Observable<any> {
     console.log(credentials);
 
-    const res = this.http.get<any>("http://localhost:5222/api/Authentication/not-secret");
-    // const res = this.http.get<any>("https://reqbin.com/echo/get/json");
+    // const res = this.http.get<any>("http://localhost:5222/api/Authentication/not-secret");
 
+    const response = this.http.post<any>("http://localhost:5222/api/Authentication", credentials);
 
-    // return of();
-    res.subscribe(x => console.log(x))
-    return res;
+    response.subscribe(x => console.log(x))
+    return response;
   }
 }
